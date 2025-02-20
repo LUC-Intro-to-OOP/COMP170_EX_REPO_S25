@@ -3,34 +3,19 @@ public class LoopLuxuryLiving {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
        
-      
-        //Declared the array
-        Apartment [] apartments = new Apartment[3];
+        Apartment one_apartment = new Apartment(); //Declare an apartment object - Instantiation
+        Apartment second_apartment = new Apartment();
 
-        for(var i = 0; i < apartments.length; i++){
-            //create the object instance
-            String inputName, inputAddress;
-            int floorCount;
+        one_apartment.setName("Amli 900");
+        one_apartment.setAddress("123 Loyola Drive");
+        one_apartment.setFloorCount(12);
 
-            //Create the new object instance
-            apartments[i] = new Apartment();
+        second_apartment.setName("1000M");
+        second_apartment.setAddress("123 Loyola Drive");
+        second_apartment.setFloorCount(12);
 
-            System.out.print("Please enter name of Apartment " + (i+1));
-            inputName = input.nextLine();
-            apartments[i].name = inputName;
+        System.out.println("Name: " + one_apartment.getName() + " Address: " + one_apartment.getAddress() + " Floor Count: " + one_apartment.getFloorCount());
+        System.out.println("Name: " + second_apartment.getName() + " Address: " + second_apartment.getAddress() + " Floor Count: " + second_apartment.getFloorCount());
 
-            System.out.println("Please enter Address:");
-            inputAddress = input.nextLine();
-            apartments[i].address = inputAddress;
-
-
-            System.out.println("Please enter Floor Count:");
-            floorCount = Integer.parseInt(input.nextLine());
-            apartments[i].floorCount = floorCount;
-        }
-
-        for(int x=0; x < apartments.length; x++){
-            System.out.println(apartments[x].name + " " + apartments[x].address + " " + apartments[x].floorCount);
-        }
     }
 }
