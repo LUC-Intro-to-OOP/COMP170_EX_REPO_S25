@@ -8,6 +8,8 @@ public class CarManagement {
         double price;
         ElectricCar aCar;
 
+        Car anotherCar = new Car();
+
         ArrayList<ElectricCar> electricCars = new ArrayList<>(); //Array of Cars
 
 
